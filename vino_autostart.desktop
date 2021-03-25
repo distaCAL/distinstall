@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Exec=systemctl --user start vino-server
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Vino Server
+Name[fr_FR]=Vino Serveur
+Name=Vino Server
+Comment[en_US]=Auto-start the VNC service on login in
+Comment[fr_FR]=Auto-démare le service VNC sur une connection
+Comment=Auto-start the VNC service on login in
