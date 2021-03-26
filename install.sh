@@ -28,7 +28,7 @@ main() {
                 # installation for jetsons
                 ;;
             other) 
-                # installation for other platforms
+                # installation for other platforms 
                 ;;
             *) 
                 # print error message
