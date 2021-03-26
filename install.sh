@@ -17,7 +17,7 @@ main() {
         -h | --help)
             usage
             exit 0
-            ;;
+            ;; 
         --target)
             shift
             case $1 in 
