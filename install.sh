@@ -22,7 +22,7 @@ main() {
             shift
             case $1 in 
             alienware)
-                # installation for alienware
+                # installation for alienware 
                 ;;
             jetson) 
                 # installation for jetsons
