@@ -20,7 +20,7 @@ main() {
             ;;
         --target)
             shift
-            case $1 in
+            case $1 in 
             alienware)
                 # installation for alienware
                 ;;
