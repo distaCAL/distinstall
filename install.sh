@@ -41,8 +41,8 @@ main() {
             zed_sdk_installation
             lambda_stack_installation
             miscelanious_pip_installations
-            vino_server_setup
-            git_setup
+            # vino_server_setup
+            # git_setup
             break
             ;;
         -t | --apt)
