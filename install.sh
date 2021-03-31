@@ -148,7 +148,6 @@ vino_server_setup() {
     dbus-launch gsettings set org.gnome.Vino authentication-methods "['vnc']"
     dbus-launch gsettings set org.gnome.Vino vnc-password $(echo -n "12345678" | base64) # password is 12345678. is hard coded for now
 
-    # (crontab -l echo "@reboot /usr/lib/vino/vino-server" 2>/dev/null) | crontab - # shouldve worked, but doesnt. (vino doesnt start)
     cat vino.desktop >~/.config/autostart/vino.desktop
 }
 
@@ -158,6 +157,7 @@ git_setup() {
 
     chmod 400 ~/.ssh/id_ed25519
 
+    eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_ed25519
 
     ssh -o StrictHostKeyChecking=accept-new github.com
