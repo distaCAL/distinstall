@@ -142,13 +142,15 @@ vino_server_setup() {
     gsettings set org.gnome.Vino prompt-enabled false
     gsettings set org.gnome.desktop.notifications show-in-lock-screen false
     gsettings set org.gnome.desktop.notifications show-banners false
-    gsettings set org.gnome.desktop.notifications view-only false
+
+    gsettings set org.gnome.Vino view-only false
 
     dbus-launch gsettings set org.gnome.Vino require-encryption false
     dbus-launch gsettings set org.gnome.Vino authentication-methods "['vnc']"
     dbus-launch gsettings set org.gnome.Vino vnc-password $(echo -n "12345678" | base64) # password is 12345678. is hard coded for now
 
-    cat vino.desktop >~/.config/autostart/vino.desktop
+    touch -p ~/config/autostart/vino_autostart.desktop
+    cat vino_autostart.desktop > ~/.config/autostart/vino_autostart.desktop
 }
 
 git_setup() {
