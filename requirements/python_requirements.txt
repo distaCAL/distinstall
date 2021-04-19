@@ -1,0 +1,6 @@
+pyopengl 
+webcolors 
+zmq 
+nanocamera 
+serial 
+opencv-contrib-python==4.2.0.34

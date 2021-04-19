@@ -1,0 +1,6 @@
+git 
+gitg 
+python3-pip 
+v4l-utils 
+nano 
+ssh
