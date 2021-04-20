@@ -120,7 +120,7 @@ lambda_stack_installation() {
         LAMBDA_REPO=$(mktemp) &&
             wget -O "${LAMBDA_REPO}" "https://lambdalabs.com/static/misc/lambda-stack-repo.deb" &&
             sudo dpkg -i "${LAMBDA_REPO}" && rm --recursive --force "${LAMBDA_REPO}" &&
-            sudo apt-get update && sudo apt --yes upgrade &&
+            sudo apt-get update && sudo apt --yes --accept-downgrades upgrade &&
             echo "cudnn cudnn/license_preseed select ACCEPT" | sudo debconf-set-selections &&
             sudo apt-get install --yes lambda-stack-cuda
         ;;
