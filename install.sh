@@ -149,7 +149,8 @@ vino_server_setup() {
     dbus-launch gsettings set org.gnome.Vino authentication-methods "['vnc']"
     dbus-launch gsettings set org.gnome.Vino vnc-password $(echo -n "12345678" | base64) # password is 12345678. is hard coded for now
 
-    touch -p ~/config/autostart/vino_autostart.desktop
+    mkdir -p ~/.config/autostart
+    touch ~/.config/autostart/vino_autostart.desktop
     cat vino_autostart.desktop > ~/.config/autostart/vino_autostart.desktop
 }
 
